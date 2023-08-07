@@ -61,7 +61,7 @@ def info():
         click.echo(f"  IP Address: {socket.gethostbyname(socket.gethostname())}")
         click.echo("  Instructions for Connecting to Other Machines:")
         click.echo("  - For Linux: Open a terminal and use 'smbclient' or 'nautilus' to connect.")
-        click.echo("  - For Windows: Open File Explorer and enter '\\\\<Linux-IP>'.")
+        click.echo("  - For Windows: Open File Explorer and enter '\\\\<hostname -I>'.")
     except Exception as e:
         click.echo(f"Error displaying information: {e}")
 
