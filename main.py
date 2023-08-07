@@ -49,19 +49,19 @@ def status():
 def info():
     """Display User, System, and Network Information"""
     try:
-    click.echo("User Information:")
-    click.echo(f"  Current User: {os.getlogin()}")
-    click.echo(f"  User ID: {os.getuid()}")
+        click.echo("User Information:")
+        click.echo(f"  Current User: {os.getlogin()}")
+        click.echo(f"  User ID: {os.getuid()}")
 
-    click.echo("\nSystem Information:")
-    click.echo(f"  Hostname: {socket.gethostname()}")
-    click.echo(f"  OS: {os.uname().sysname} {os.uname().release}")
+        click.echo("\nSystem Information:")
+        click.echo(f"  Hostname: {socket.gethostname()}")
+        click.echo(f"  OS: {os.uname().sysname} {os.uname().release}")
 
-    click.echo("\nNetwork Information:")
-    click.echo(f"  IP Address: {socket.gethostbyname(socket.gethostname())}")
-    click.echo("  Instructions for Connecting to Other Machines:")
-    click.echo("  - For Linux: Open a terminal and use 'smbclient' or 'nautilus' to connect.")
-    click.echo("  - For Windows: Open File Explorer and enter '\\\\<Linux-IP>' in the address bar. Hint: type hostname -I")
+        click.echo("\nNetwork Information:")
+        click.echo(f"  IP Address: {socket.gethostbyname(socket.gethostname())}")
+        click.echo("  Instructions for Connecting to Other Machines:")
+        click.echo("  - For Linux: Open a terminal and use 'smbclient' or 'nautilus' to connect.")
+        click.echo("  - For Windows: Open File Explorer and enter '\\\\<Linux-IP>' in the address bar. Hint: type hostname -I")
     
     except Exception as e:
         click.echo(f"Error displaying information: {e}")
